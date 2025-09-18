@@ -1,0 +1,185 @@
+
+    RELATÓRIO DESCRITIVO DO DATASET
+
+    1. Informações Gerais:
+      - Número total de registros: 1309
+      - Número total de colunas: 9
+      - Colunas numéricas: ['Passengerid', 'Age', 'Fare', 'Sex', 'sibsp', 'Parch', 'Pclass', 'Embarked', '2urvived']
+      - Colunas categóricas: Nenhuma
+
+    2. Estatísticas Descritivas (colunas numéricas):
+		       Passengerid          Age         Fare          Sex        sibsp  \
+		count  1309.000000  1309.000000  1309.000000  1309.000000  1309.000000   
+		mean    655.000000    29.503186    33.281086     0.355997     0.498854   
+		std     378.020061    12.905241    51.741500     0.478997     1.041658   
+		min       1.000000     0.170000     0.000000     0.000000     0.000000   
+		25%     328.000000    22.000000     7.895800     0.000000     0.000000   
+		50%     655.000000    28.000000    14.454200     0.000000     0.000000   
+		75%     982.000000    35.000000    31.275000     1.000000     1.000000   
+		max    1309.000000    80.000000   512.329200     1.000000     8.000000   
+
+		             Parch       Pclass     Embarked     2urvived  
+		count  1309.000000  1309.000000  1307.000000  1309.000000  
+		mean      0.385027     2.294882     1.492731     0.261268  
+		std       0.865560     0.837836     0.814626     0.439494  
+		min       0.000000     1.000000     0.000000     0.000000  
+		25%       0.000000     2.000000     1.000000     0.000000  
+		50%       0.000000     3.000000     2.000000     0.000000  
+		75%       0.000000     3.000000     2.000000     1.000000  
+		max       9.000000     3.000000     2.000000     1.000000  
+
+    3. Moda das variáveis numéricas:
+		Passengerid     1.00
+		Age            28.00
+		Fare            8.05
+		Sex             0.00
+		sibsp           0.00
+		Parch           0.00
+		Pclass          3.00
+		Embarked        2.00
+		2urvived        0.00
+		Name: 0, dtype: float64
+
+    4. Medidas de Dispersão:
+      - Amplitude:
+		Passengerid    1308.0000
+		Age              79.8300
+		Fare            512.3292
+		Sex               1.0000
+		sibsp             8.0000
+		Parch             9.0000
+		Pclass            2.0000
+		Embarked          2.0000
+		2urvived          1.0000
+		dtype: float64
+
+      - Intervalo Interquartil (IQR):
+		Passengerid    654.0000
+		Age             13.0000
+		Fare            23.3792
+		Sex              1.0000
+		sibsp            1.0000
+		Parch            0.0000
+		Pclass           1.0000
+		Embarked         1.0000
+		2urvived         1.0000
+		dtype: float64
+
+      - Variância:
+		Passengerid    142899.166667
+		Age               166.545235
+		Fare             2677.182798
+		Sex                 0.229438
+		sibsp               1.085052
+		Parch               0.749195
+		Pclass              0.701969
+		Embarked            0.663615
+		2urvived            0.193155
+		dtype: float64
+
+    5. Medidas de Distribuição:
+      - Assimetria (Skewness):
+		Passengerid    0.000000
+		Age            0.540987
+		Fare           4.369510
+		Sex            0.602189
+		sibsp          3.844220
+		Parch          3.669078
+		Pclass        -0.598647
+		Embarked      -1.125593
+		2urvived       1.088057
+		dtype: float64
+
+      - Curtose (Kurtosis):
+		Passengerid    -1.200000
+		Age             0.969907
+		Fare           27.049667
+		Sex            -1.639876
+		sibsp          20.043251
+		Parch          21.541079
+		Pclass         -1.315079
+		Embarked       -0.546942
+		2urvived       -0.817382
+		dtype: float64
+
+    6. Outliers (Tukey - 1.5 * IQR):
+      - Quantidade de linhas com outliers:
+		451
+
+      - Linhas com outliers:
+		      Passengerid   Age      Fare  Sex  sibsp  Parch  Pclass  Embarked  \
+		1               2  38.0   71.2833    1      1      0       1       0.0   
+		7               8   2.0   21.0750    0      3      1       3       2.0   
+		8               9  27.0   11.1333    1      0      2       3       2.0   
+		10             11   4.0   16.7000    1      1      1       3       2.0   
+		11             12  58.0   26.5500    1      0      0       1       2.0   
+		...           ...   ...       ...  ...    ...    ...     ...       ...   
+		1298         1299  50.0  211.5000    0      1      1       1       0.0   
+		1300         1301   3.0   13.7750    1      1      1       3       2.0   
+		1302         1303  37.0   90.0000    1      1      0       1       1.0   
+		1305         1306  39.0  108.9000    1      0      0       1       0.0   
+		1308         1309  28.0   22.3583    0      1      1       3       0.0   
+
+		      2urvived  
+		1            1  
+		7            0  
+		8            1  
+		10           1  
+		11           1  
+		...        ...  
+		1298         0  
+		1300         0  
+		1302         0  
+		1305         0  
+		1308         0  
+
+		[451 rows x 9 columns]
+
+    7. Colunas Categóricas:
+      - Frequências (Top-5 categorias):
+		Não aplicável
+
+      - Domínio da categoria mais frequente (%):
+		Não aplicável
+
+    8. Correlações:
+      - Todas as correlações:
+		             Passengerid       Age      Fare       Sex     sibsp     Parch  \
+		Passengerid     1.000000  0.025799  0.031128 -0.013406 -0.055224  0.008942   
+		Age             0.025799  1.000000  0.178182 -0.053663 -0.189972 -0.125851   
+		Fare            0.031128  0.178182  1.000000  0.185681  0.160349  0.221635   
+		Sex            -0.013406 -0.053663  0.185681  1.000000  0.109609  0.213125   
+		sibsp          -0.055224 -0.189972  0.160349  0.109609  1.000000  0.373587   
+		Parch           0.008942 -0.125851  0.221635  0.213125  0.373587  1.000000   
+		Pclass         -0.038354 -0.377908 -0.558683 -0.124617  0.060832  0.018322   
+		Embarked       -0.051518 -0.065125 -0.239212 -0.099408  0.066055  0.045216   
+		2urvived       -0.331493 -0.055862  0.173786  0.404020 -0.014375  0.054908   
+
+		               Pclass  Embarked  2urvived  
+		Passengerid -0.038354 -0.051518 -0.331493  
+		Age         -0.377908 -0.065125 -0.055862  
+		Fare        -0.558683 -0.239212  0.173786  
+		Sex         -0.124617 -0.099408  0.404020  
+		sibsp        0.060832  0.066055 -0.014375  
+		Parch        0.018322  0.045216  0.054908  
+		Pclass       1.000000  0.187349 -0.244686  
+		Embarked     0.187349  1.000000 -0.093225  
+		2urvived    -0.244686 -0.093225  1.000000  
+
+      - Principais correlações positivas:
+		Sex     2urvived    0.404020
+		sibsp   Parch       0.373587
+		Fare    Parch       0.221635
+		Sex     Parch       0.213125
+		Pclass  Embarked    0.187349
+		dtype: float64
+
+      - Principais correlações negativas:
+		Fare         Pclass     -0.558683
+		Age          Pclass     -0.377908
+		Passengerid  2urvived   -0.331493
+		Pclass       2urvived   -0.244686
+		Fare         Embarked   -0.239212
+		dtype: float64
+
+  

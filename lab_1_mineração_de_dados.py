@@ -111,6 +111,8 @@ def gerar_relatorio(dataset):
 
 
 # Carregue seu dataset aqui
+file_path = "/content/train_and_test2.csv"
+df_titanic = pd.read_csv(file_path)
 
 # Chamada da função
-gerar_relatorio("seu dataset")
+gerar_relatorio(df_titanic)
